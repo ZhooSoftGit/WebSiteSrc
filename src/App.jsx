@@ -13,6 +13,7 @@ import WebApplicationDevelopment from "@/pages/services/WebApplicationDevelopmen
 import MobileApplicationDevelopment from "@/pages/services/MobileApplicationDevelopment";
 import CloudSolutions from "@/pages/services/CloudSolutions";
 import AIServices from "@/pages/services/AIServices";
+import CaseStudyPage from "@/pages/services/CaseStudyPage";
 
 import Products from "@/pages/Products";
 import RideBookingApp from "@/pages/products/RideBookingApp";
@@ -55,12 +56,19 @@ function App() {
 
             <Route path="/services" element={<Services />} />
             <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+            <Route path="/services/digital-transformation/case-study/:caseStudyId" element={<CaseStudyPage parentService="Digital Transformation"/>} />
             <Route path="/services/custom-software-solutions" element={<CustomSoftwareSolutions />} />
+            <Route path="/services/custom-software-solutions/case-study/:caseStudyId" element={<CaseStudyPage parentService="Custom Software Solutions"/>} />
             <Route path="/services/it-consulting" element={<ITConsulting />} />
+            <Route path="/services/it-consulting/case-study/:caseStudyId" element={<CaseStudyPage parentService="IT Consulting"/>} />
             <Route path="/services/web-application-development" element={<WebApplicationDevelopment />} />
+            <Route path="/services/web-application-development/case-study/:caseStudyId" element={<CaseStudyPage parentService="Web Application Development"/>} />
             <Route path="/services/mobile-application-development" element={<MobileApplicationDevelopment />} />
+             <Route path="/services/mobile-application-development/case-study/:caseStudyId" element={<CaseStudyPage parentService="Mobile Application Development"/>} />
             <Route path="/services/cloud-solutions" element={<CloudSolutions />} />
+            <Route path="/services/cloud-solutions/case-study/:caseStudyId" element={<CaseStudyPage parentService="Cloud Solutions"/>} />
             <Route path="/services/ai-services" element={<AIServices />} />
+            <Route path="/services/ai-services/case-study/:caseStudyId" element={<CaseStudyPage parentService="AI Services"/>} />
             
             <Route path="/products" element={<Products />} />
             <Route path="/products/ride-booking-app" element={<RideBookingApp />} />
