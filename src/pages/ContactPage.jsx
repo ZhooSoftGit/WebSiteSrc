@@ -23,10 +23,20 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Contact Form Data:", formData);
+    
+    const subject = `Contact Form: ${formData.subject} - ${formData.name}`;
+    let body = `Name: ${formData.name}\n`;
+    body += `Email: ${formData.email}\n`;
+    body += `Subject: ${formData.subject}\n`;
+    body += `\nMessage:\n${formData.message}\n`;
+
+    const mailtoLink = `mailto:contact@zhoosoft.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoLink;
+
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you shortly.",
+      title: "Message Ready",
+      description: "Your email client should open with the message details. Please send the email.",
     });
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
@@ -75,7 +85,7 @@ const ContactPage = () => {
                 <Textarea name="message" id="message" value={formData.message} onChange={handleInputChange} placeholder="Your message here..." rows={5} required className="mt-1"/>
               </div>
               <Button type="submit" size="lg" className="w-full bg-teal-600 hover:bg-teal-700">
-                <Send className="mr-2 h-5 w-5" /> Send Message
+                <Send className="mr-2 h-5 w-5" /> Prepare Email Message
               </Button>
             </form>
           </motion.div>
@@ -104,7 +114,7 @@ const ContactPage = () => {
               <div>
                 <h3 className="text-lg font-semibold text-gray-700">Email Us</h3>
                 <p className="text-gray-600">contact@zhoosoft.com</p>
-                <p className="text-gray-600">support@zhoosoft.com</p>
+                <p className="text-gray-600">careers@zhoosoft.com</p>
               </div>
             </div>
              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex items-start space-x-4">

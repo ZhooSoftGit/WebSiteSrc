@@ -31,6 +31,8 @@ const MobileApplicationDevelopment = () => {
     { icon: Apple, title: "iOS App Development", description: "Native iOS apps built with Swift/Objective-C for optimal performance and user experience on Apple devices." },
     { icon: Wind, title: "Android App Development", description: "High-quality native Android apps developed with Kotlin/Java for the diverse Android ecosystem." },
     { icon: TabletSmartphone, title: "Cross-Platform App Development", description: "Cost-effective solutions using frameworks like React Native or Flutter to build apps for multiple platforms with a single codebase." },
+    { icon: Code, title: ".NET MAUI Development", description: "Build native, cross-platform apps for iOS, Android, Windows, and macOS with .NET MAUI, offering smooth transitions and a unified codebase." },
+    { icon: Layers, title: "Xamarin Development", description: "Leverage Xamarin for creating native mobile apps with C#, sharing code across platforms for efficient development and maintenance." },
     { icon: Layers, title: "Progressive Web Apps (PWA)", description: "Web applications that offer an app-like experience, accessible via a browser and installable on devices." },
     { icon: Palette, title: "App UI/UX Design", description: "Intuitive, engaging, and visually stunning user interfaces and experiences designed to delight users." },
     { icon: Code, title: "Backend/API Development", description: "Robust and scalable backend systems and APIs to power your mobile applications." },
@@ -39,7 +41,7 @@ const MobileApplicationDevelopment = () => {
 
   const appDevelopmentProcess = [
     { icon: Lightbulb, title: "Idea & Requirement Gathering", description: "We start by understanding your vision, target audience, and detailed requirements for the app." },
-    { icon: Palette, title: "UI/UX Design & Prototyping", description: "Our designers create wireframes, mockups, and interactive prototypes for a user-centric design." },
+    { icon: Palette, title: "UI/UX Design & Prototyping", description: "Our designers create wireframes, mockups, and interactive prototypes for a user-centric design with smooth transitions." },
     { icon: GitMerge, title: "Agile Development", description: "We follow agile methodologies, building your app in iterative sprints for flexibility and regular feedback." },
     { icon: LinkIcon, title: "API & Backend Integration", description: "Seamless integration with necessary APIs and development of a robust backend if required." },
     { icon: CheckCircle, title: "Testing & Quality Assurance", description: "Rigorous testing across devices and scenarios to ensure a bug-free and high-performing application." },
@@ -52,10 +54,10 @@ const MobileApplicationDevelopment = () => {
     { name: "Kotlin", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg", color: "text-purple-600" },
     { name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", color: "text-blue-500" },
     { name: "Flutter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg", color: "text-sky-500" },
+    { name: ".NET MAUI", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg", color: "text-purple-500" },
+    { name: "Xamarin", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xamarin/xamarin-original.svg", color: "text-blue-400" },
     { name: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg", color: "text-yellow-500" },
     { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg", color: "text-green-600" },
-    { name: "AWS Amplify", logo: "https://img.icons8.com/?size=48&id=t2250720s7A5&format=png", color: "text-orange-400" },
-    { name: "SQLite", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg", color: "text-blue-700" },
   ];
   
   const featuredProjects = [
@@ -67,7 +69,7 @@ const MobileApplicationDevelopment = () => {
     <div className="bg-white">
       <ServiceHero
         title="Mobile Application Development"
-        subtitle="Crafting intuitive, high-performance mobile apps that captivate users and drive business growth across iOS, Android, and cross-platform."
+        subtitle="Crafting intuitive, high-performance mobile apps that captivate users and drive business growth across iOS, Android, and cross-platform technologies including .NET MAUI and Xamarin."
         CtaIcon={Smartphone}
         gradientColors="from-pink-500 to-rose-600"
       />
@@ -77,21 +79,21 @@ const MobileApplicationDevelopment = () => {
       
       <ServiceListSection 
         title="Our Mobile App Development Services"
-        subtitle="A full spectrum of services to bring your mobile app idea to life, from concept to launch and beyond."
+        subtitle="A full spectrum of services to bring your mobile app idea to life, from concept to launch and beyond, including expertise in MAUI and Xamarin for smooth, native cross-platform experiences."
         services={mobileAppServices}
         accentColor="pink"
       />
       
       <ProcessStepsSection 
         title="Our App Development Process"
-        subtitle="A streamlined, agile process designed to deliver high-quality mobile applications efficiently and effectively."
+        subtitle="A streamlined, agile process designed to deliver high-quality mobile applications efficiently and effectively, ensuring smooth transitions and excellent UI/UX."
         steps={appDevelopmentProcess}
         accentColor="pink"
       />
       
       <TechStackSection 
         title="Technology Stack We Use for Mobile Apps"
-        subtitle="Leveraging the latest and most robust technologies to build exceptional mobile experiences."
+        subtitle="Leveraging the latest and most robust technologies, including .NET MAUI and Xamarin, to build exceptional mobile experiences."
         technologies={mobileTechStack}
         bgColor="bg-gray-50"
       />

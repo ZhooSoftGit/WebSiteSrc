@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Home from "@/pages/Home";
+import ScrollToTop from "@/components/ScrollToTop";
 
 import Services from "@/pages/Services";
 import DigitalTransformation from "@/pages/services/DigitalTransformation";
@@ -13,7 +14,7 @@ import WebApplicationDevelopment from "@/pages/services/WebApplicationDevelopmen
 import MobileApplicationDevelopment from "@/pages/services/MobileApplicationDevelopment";
 import CloudSolutions from "@/pages/services/CloudSolutions";
 import AIServices from "@/pages/services/AIServices";
-import CaseStudyPage from "@/pages/services/CaseStudyPage";
+import ServiceCaseStudyPage from "@/pages/services/CaseStudyPage"; 
 
 import Products from "@/pages/Products";
 import RideBookingApp from "@/pages/products/RideBookingApp";
@@ -29,6 +30,8 @@ import IndustryAutomation from "@/pages/industries/IndustryAutomation";
 import EnergyUtilities from "@/pages/industries/EnergyUtilities";
 import Automotive from "@/pages/industries/Automotive";
 import GamingEntertainment from "@/pages/industries/GamingEntertainment";
+import IndustryCaseStudyPage from "@/pages/industries/IndustryCaseStudyPage";
+
 
 import Career from "@/pages/Career";
 
@@ -48,6 +51,7 @@ import ContactPage from "@/pages/ContactPage";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow pt-16 md:pt-20">
@@ -56,19 +60,19 @@ function App() {
 
             <Route path="/services" element={<Services />} />
             <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
-            <Route path="/services/digital-transformation/case-study/:caseStudyId" element={<CaseStudyPage parentService="Digital Transformation"/>} />
+            <Route path="/services/digital-transformation/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="Digital Transformation"/>} />
             <Route path="/services/custom-software-solutions" element={<CustomSoftwareSolutions />} />
-            <Route path="/services/custom-software-solutions/case-study/:caseStudyId" element={<CaseStudyPage parentService="Custom Software Solutions"/>} />
+            <Route path="/services/custom-software-solutions/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="Custom Software Solutions"/>} />
             <Route path="/services/it-consulting" element={<ITConsulting />} />
-            <Route path="/services/it-consulting/case-study/:caseStudyId" element={<CaseStudyPage parentService="IT Consulting"/>} />
+            <Route path="/services/it-consulting/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="IT Consulting"/>} />
             <Route path="/services/web-application-development" element={<WebApplicationDevelopment />} />
-            <Route path="/services/web-application-development/case-study/:caseStudyId" element={<CaseStudyPage parentService="Web Application Development"/>} />
+            <Route path="/services/web-application-development/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="Web Application Development"/>} />
             <Route path="/services/mobile-application-development" element={<MobileApplicationDevelopment />} />
-             <Route path="/services/mobile-application-development/case-study/:caseStudyId" element={<CaseStudyPage parentService="Mobile Application Development"/>} />
+             <Route path="/services/mobile-application-development/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="Mobile Application Development"/>} />
             <Route path="/services/cloud-solutions" element={<CloudSolutions />} />
-            <Route path="/services/cloud-solutions/case-study/:caseStudyId" element={<CaseStudyPage parentService="Cloud Solutions"/>} />
+            <Route path="/services/cloud-solutions/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="Cloud Solutions"/>} />
             <Route path="/services/ai-services" element={<AIServices />} />
-            <Route path="/services/ai-services/case-study/:caseStudyId" element={<CaseStudyPage parentService="AI Services"/>} />
+            <Route path="/services/ai-services/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="AI Services"/>} />
             
             <Route path="/products" element={<Products />} />
             <Route path="/products/ride-booking-app" element={<RideBookingApp />} />
@@ -78,12 +82,20 @@ function App() {
 
             <Route path="/industries" element={<Industries />} />
             <Route path="/industries/travel-logistics" element={<TravelLogistics />} />
+            <Route path="/industries/travel-logistics/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Travel & Logistics" />} />
             <Route path="/industries/financial-services" element={<FinancialServices />} />
+            <Route path="/industries/financial-services/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Banking & Finance" />} />
             <Route path="/industries/life-sciences-healthcare" element={<LifeSciencesHealthcare />} />
+            <Route path="/industries/life-sciences-healthcare/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Healthcare" />} />
             <Route path="/industries/industry-automation" element={<IndustryAutomation />} />
+            <Route path="/industries/industry-automation/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Automation" />} />
             <Route path="/industries/energy-utilities" element={<EnergyUtilities />} />
+            <Route path="/industries/energy-utilities/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Energy & Utilities" />} />
             <Route path="/industries/automotive" element={<Automotive />} />
+            <Route path="/industries/automotive/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Automotive" />} />
             <Route path="/industries/gaming-entertainment" element={<GamingEntertainment />} />
+            <Route path="/industries/gaming-entertainment/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Gaming & Entertainment" />} />
+
 
             <Route path="/career" element={<Career />} />
             
