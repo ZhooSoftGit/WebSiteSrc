@@ -21,7 +21,7 @@ const ContactPage = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     const subject = `Contact Form: ${formData.subject} - ${formData.name}`;
@@ -30,9 +30,23 @@ const ContactPage = () => {
     body += `Subject: ${formData.subject}\n`;
     body += `\nMessage:\n${formData.message}\n`;
 
-    const mailtoLink = `mailto:contact@zhoosoft.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // const mailtoLink = `mailto:contact@zhoosoft.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    window.location.href = mailtoLink;
+    // window.location.href = mailtoLink;
+
+    const res = await fetch("/sendemail.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        mailto: "contact@zhoosoft.com"
+      }),
+    });
 
     toast({
       title: "Message Ready",
