@@ -79,7 +79,7 @@ const Automotive = () => {
         title="Automotive Software Solutions"
         subtitle="Driving the future of mobility with innovative software for connected cars, electric vehicles, autonomous driving, and smart manufacturing."
         CtaIcon={Car}
-        gradientColors="from-slate-700 to-gray-800"
+        gradientColors="from-teal-600 to-cyan-700"
         breadcrumbs={breadcrumbs}
       />
       <ZigZagSection {...industryOverview} />
@@ -88,7 +88,7 @@ const Automotive = () => {
         title="Our Automotive Software Solutions"
         subtitle="Comprehensive software development services to help automotive players innovate and succeed."
         services={solutions}
-        accentColor="blue"
+        accentColor="teal"
       />
       <section className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">

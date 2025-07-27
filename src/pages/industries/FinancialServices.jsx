@@ -79,7 +79,7 @@ const FinancialServices = () => {
         title="Banking & Financial Services Solutions"
         subtitle="Secure, compliant, and innovative digital solutions to modernize banking operations, enhance customer experiences, and drive growth in the financial sector."
         CtaIcon={Banknote}
-        gradientColors="from-indigo-600 to-blue-700"
+        gradientColors="from-teal-600 to-cyan-700"
         breadcrumbs={breadcrumbs}
       />
       <ZigZagSection {...industryOverview} />
@@ -88,7 +88,7 @@ const FinancialServices = () => {
         title="Our Solutions for Banking & Finance"
         subtitle="Comprehensive technology offerings to empower financial institutions in the digital age."
         services={solutions}
-        accentColor="blue"
+        accentColor="teal"
       />
       <section className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">

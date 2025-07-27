@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const IndustryHero = ({ title, subtitle, CtaIcon, gradientColors = "from-blue-600 to-indigo-700", breadcrumbs }) => {
+const IndustryHero = ({ title, subtitle, CtaIcon, gradientColors = "from-teal-600 to-cyan-700", breadcrumbs }) => {
   const fadeIn = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
@@ -34,7 +34,7 @@ const IndustryHero = ({ title, subtitle, CtaIcon, gradientColors = "from-blue-60
           {subtitle}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
+          <Button asChild size="lg" className="bg-white text-teal-700 hover:bg-teal-50">
             <Link to="/contact">Discuss Your Project <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 hover:text-white">

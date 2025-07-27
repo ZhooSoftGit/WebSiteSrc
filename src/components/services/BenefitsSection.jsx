@@ -38,7 +38,7 @@ const BenefitsSection = ({ title, subtitle, benefits }) => {
               variants={itemVariants}
               className="bg-white p-6 rounded-xl shadow-lg card-hover flex items-start space-x-4"
             >
-              <div className="flex-shrink-0 p-3 bg-blue-100 text-blue-600 rounded-full mt-1">
+              <div className="flex-shrink-0 p-3 bg-teal-100 text-teal-600 rounded-full mt-1">
                 <benefit.icon className="h-6 w-6" />
               </div>
               <div>

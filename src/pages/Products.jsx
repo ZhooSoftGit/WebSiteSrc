@@ -56,8 +56,7 @@ const Products = () => {
 
   return (
     <div className="pt-24 pb-16">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <section className="py-16 bg-gradient-to-r from-teal-600 to-cyan-700 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
             className="max-w-3xl mx-auto text-center"
@@ -66,14 +65,13 @@ const Products = () => {
             variants={fadeIn}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Products</h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-teal-100 mb-8">
               Discover our suite of innovative software products designed to solve complex business challenges and drive growth.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Products Showcase */}
       <section className="py-20">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
@@ -91,7 +89,7 @@ const Products = () => {
               >
                 <div className="md:w-1/2">
                   <div className="relative">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-lg blur-lg opacity-75"></div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-lg blur-lg opacity-75"></div>
                     <div className="relative bg-white rounded-lg shadow-xl overflow-hidden">
                       <img  alt={`${product.name} product interface`} className="w-full h-auto rounded-lg" src="https://images.unsplash.com/photo-1625296276703-3fbc924f07b5" />
                     </div>
@@ -107,7 +105,7 @@ const Products = () => {
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {product.features.map((feature, i) => (
                         <li key={i} className="flex items-center">
-                          <span className="h-2 w-2 bg-blue-500 rounded-full mr-2"></span>
+                          <span className="h-2 w-2 bg-teal-500 rounded-full mr-2"></span>
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
@@ -115,10 +113,10 @@ const Products = () => {
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button>
+                    <Button className="bg-teal-600 hover:bg-teal-700">
                       Learn More <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
-                    <Button variant="outline">
+                    <Button variant="outline" className="border-teal-600 text-teal-600 hover:bg-teal-50">
                       Request Demo
                     </Button>
                   </div>
@@ -129,7 +127,6 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
@@ -209,8 +206,7 @@ const Products = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-700 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
             className="max-w-3xl mx-auto text-center"
@@ -220,11 +216,11 @@ const Products = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-teal-100 mb-8">
               Explore our products and discover how they can help you achieve your business goals.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
+              <Button size="lg" className="bg-white text-teal-700 hover:bg-teal-50">
                 Schedule a Demo
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">

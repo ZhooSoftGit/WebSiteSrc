@@ -24,14 +24,14 @@ const AchievementsSection = () => {
   };
 
   const achievements = [
-    { number: "12+", text: "Years of Experience", icon: <Award className="h-10 w-10 text-yellow-400"/> },
-    { number: "250+", text: "Projects Delivered", icon: <CheckCircle className="h-10 w-10 text-green-400"/> },
-    { number: "100+", text: "Satisfied Clients", icon: <Users className="h-10 w-10 text-blue-400"/> },
-    { number: "15+", text: "Countries Served", icon: <Zap className="h-10 w-10 text-purple-400"/> },
+    { number: "12+", text: "Years of Experience", icon: <Award className="h-10 w-10 text-teal-300"/> },
+    { number: "250+", text: "Projects Delivered", icon: <CheckCircle className="h-10 w-10 text-teal-400"/> },
+    { number: "100+", text: "Satisfied Clients", icon: <Users className="h-10 w-10 text-teal-500"/> },
+    { number: "15+", text: "Countries Served", icon: <Zap className="h-10 w-10 text-teal-200"/> },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-gray-700 to-gray-900 text-white">
+    <section className="py-20 bg-gradient-to-r from-slate-800 to-slate-900 text-white">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           className="text-center mb-16"

@@ -17,18 +17,18 @@ const CaseStudyCard = ({ title, client, challenge, solution, result, imageSrc, l
     >
       <img  src={imageSrc} alt={title} className="w-full h-48 object-cover" />
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-blue-700 mb-2">{title}</h3>
+        <h3 className="text-xl font-bold text-teal-700 mb-2">{title}</h3>
         {client && <p className="text-sm text-gray-500 mb-1"><strong>Client:</strong> {client}</p>}
         {tags && tags.length > 0 && (
           <div className="mb-3 flex flex-wrap gap-2">
-            {tags.map(tag => <span key={tag} className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{tag}</span>)}
+            {tags.map(tag => <span key={tag} className="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full">{tag}</span>)}
           </div>
         )}
         <p className="text-sm text-gray-600 mb-1"><strong>Challenge:</strong> {challenge}</p>
         <p className="text-sm text-gray-600 mb-1"><strong>Solution:</strong> {solution}</p>
         <p className="text-sm text-gray-600 mb-3"><strong>Result:</strong> {result}</p>
         <div className="mt-auto">
-          <Button asChild variant="outline" className="w-full text-blue-600 border-blue-600 hover:bg-blue-50">
+          <Button asChild variant="outline" className="w-full text-teal-600 border-teal-600 hover:bg-teal-50">
             <Link to={link}>View Full Case Study <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </Button>
         </div>

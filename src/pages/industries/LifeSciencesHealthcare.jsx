@@ -79,7 +79,7 @@ const LifeSciencesHealthcare = () => {
         title="Healthcare & Life Sciences Solutions"
         subtitle="Empowering innovation in patient care, medical research, and pharmaceutical development through advanced digital technologies."
         CtaIcon={HeartHandshake}
-        gradientColors="from-red-500 to-pink-600"
+        gradientColors="from-teal-600 to-cyan-700"
         breadcrumbs={breadcrumbs}
       />
       <ZigZagSection {...industryOverview} />
@@ -88,7 +88,7 @@ const LifeSciencesHealthcare = () => {
         title="Our Solutions for Healthcare & Life Sciences"
         subtitle="Comprehensive digital offerings to support every aspect of the healthcare and life sciences value chain."
         services={solutions}
-        accentColor="pink"
+        accentColor="teal"
       />
       <section className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">

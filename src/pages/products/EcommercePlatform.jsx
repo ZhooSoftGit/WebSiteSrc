@@ -5,7 +5,7 @@ import { ShoppingCart, Tag, Users, CreditCard, BarChart2, Settings } from "lucid
 const EcommercePlatform = () => {
   const features = [
     {
-      icon: <Tag className="h-8 w-8 text-blue-500" />,
+      icon: <Tag className="h-8 w-8 text-teal-500" />,
       title: "Product Listings & Management",
       description: "Easily list, categorize, and manage an extensive catalog of products with variants."
     },
@@ -43,7 +43,7 @@ const EcommercePlatform = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold mb-4 text-center text-blue-700">E-commerce Platform (like Amazon/Flipkart)</h1>
+        <h1 className="text-4xl font-bold mb-4 text-center text-teal-700">E-commerce Platform (like Amazon/Flipkart)</h1>
         <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           A robust and scalable e-commerce solution designed to handle everything from small boutiques to large marketplaces.
         </p>
@@ -52,7 +52,7 @@ const EcommercePlatform = () => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg card-hover"
+              className="bg-white p-6 rounded-lg shadow-lg card-hover border-l-4 border-teal-500"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}

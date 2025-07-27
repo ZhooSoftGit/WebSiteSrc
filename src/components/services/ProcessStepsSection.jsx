@@ -71,8 +71,7 @@ const ProcessStepsSection = ({ title, subtitle, steps, accentColor = "blue" }) =
             <motion.div 
               key={index} 
               variants={itemVariants}
-              className="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 transition-all duration-300 hover:shadow-2xl"
-              style={{ borderColor: color.border.replace('border-', '')}}
+              className={`bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 ${color.border} transition-all duration-300 hover:shadow-2xl`}
             >
               <div className="flex items-center mb-4">
                 <div className={`p-3 ${color.bg} text-white rounded-full mr-4`}>

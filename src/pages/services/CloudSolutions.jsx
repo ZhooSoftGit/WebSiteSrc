@@ -1,4 +1,3 @@
-
 import React from "react";
 import ServiceHero from "@/components/services/ServiceHero";
 import ZigZagSection from "@/components/services/ZigZagSection";
@@ -71,7 +70,7 @@ const CloudSolutions = () => {
         title="Cloud Solutions & Services"
         subtitle="Unlock agility, scalability, and innovation with our comprehensive cloud solutions, tailored to your business needs and powered by leading platforms."
         CtaIcon={Cloud}
-        gradientColors="from-blue-500 to-sky-600"
+        gradientColors="from-teal-600 to-cyan-700"
       />
 
       <ZigZagSection {...whyCloudSolution} />
@@ -81,7 +80,7 @@ const CloudSolutions = () => {
         title="Our Comprehensive Cloud Services"
         subtitle="From strategy and migration to management and optimization, we cover every aspect of your cloud journey."
         services={cloudServices}
-        accentColor="blue"
+        accentColor="teal"
       />
       
       <TechStackSection 
@@ -95,7 +94,7 @@ const CloudSolutions = () => {
         title="Our Cloud Adoption Framework"
         subtitle="A structured approach to guide your business through a successful and seamless transition to the cloud."
         steps={cloudAdoptionFramework}
-        accentColor="blue"
+        accentColor="teal"
       />
       
       <section className="py-12 md:py-20 bg-white">

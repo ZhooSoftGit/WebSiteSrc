@@ -2,9 +2,8 @@ import React from "react";
 import HeroSection from "@/components/home/HeroSection";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import ProductsHighlight from "@/components/home/ProductsHighlight";
-import IndustriesServed from "@/components/home/IndustriesServed";
-import AchievementsSection from "@/components/home/AchievementsSection";
-import AboutZhoosoftSection from "@/components/home/AboutZhoosoftSection";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+import ZhoosoftVoices from "@/components/home/ZhoosoftVoices";
 import HomeCtaSection from "@/components/home/HomeCtaSection";
 
 const Home = () => {
@@ -13,9 +12,8 @@ const Home = () => {
       <HeroSection />
       <ServicesOverview />
       <ProductsHighlight />
-      <IndustriesServed />
-      <AchievementsSection />
-      <AboutZhoosoftSection />
+      <TestimonialsSection />
+      <ZhoosoftVoices />
       <HomeCtaSection />
     </div>
   );

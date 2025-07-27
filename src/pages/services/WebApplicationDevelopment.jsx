@@ -1,4 +1,3 @@
-
 import React from "react";
 import ServiceHero from "@/components/services/ServiceHero";
 import ZigZagSection from "@/components/services/ZigZagSection";
@@ -74,7 +73,7 @@ const WebApplicationDevelopment = () => {
         title="Web Application Development"
         subtitle="Building powerful, scalable, and secure web applications that deliver exceptional user experiences and drive business outcomes."
         CtaIcon={Layers}
-        gradientColors="from-sky-500 to-cyan-600"
+        gradientColors="from-teal-600 to-cyan-700"
       />
 
       <ZigZagSection {...whyChooseWebApp} />
@@ -84,7 +83,7 @@ const WebApplicationDevelopment = () => {
         title="Our Web Development Services"
         subtitle="Comprehensive web application development services to bring your digital vision to life."
         services={webDevServices}
-        accentColor="blue"
+        accentColor="teal"
       />
       
       <TechStackSection 
@@ -98,7 +97,7 @@ const WebApplicationDevelopment = () => {
         title="Our Web Application Development Approach"
         subtitle="A structured and agile methodology ensuring timely delivery of high-quality web solutions."
         steps={developmentApproach}
-        accentColor="blue"
+        accentColor="teal"
       />
       
       <section className="py-12 md:py-20 bg-white">

@@ -83,7 +83,7 @@ const AIServices = () => {
         title="AI Services & Intelligent Agents"
         subtitle="Unlock the power of Artificial Intelligence to automate processes, gain deep insights, and create transformative experiences for your business."
         CtaIcon={Cpu}
-        gradientColors="from-indigo-600 to-purple-700"
+        gradientColors="from-teal-600 to-cyan-700"
       />
 
       <ZigZagSection {...whatAreAIServices} />
@@ -91,7 +91,7 @@ const AIServices = () => {
         title="Our AI Capabilities"
         subtitle="We offer a wide range of AI services to help you leverage the full potential of artificial intelligence."
         services={aiCapabilities}
-        accentColor="purple"
+        accentColor="teal"
       />
       <BenefitsSection title="AI Agents in Action: Real-World Use Cases" subtitle="Discover how AI agents are revolutionizing industries and delivering tangible business value." benefits={aiUseCases} />
       
@@ -99,7 +99,7 @@ const AIServices = () => {
         title="Our Approach to AI Solution Delivery"
         subtitle="A structured methodology to ensure your AI initiatives are successful, from concept to deployment and beyond."
         steps={aiSolutionDeliveryProcess}
-        accentColor="purple"
+        accentColor="teal"
       />
       
       <TechStackSection 

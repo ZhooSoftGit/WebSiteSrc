@@ -4,37 +4,6 @@ import { Users2, Zap, Lightbulb, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-const teamMembers = [
-  {
-    name: "Aarav Sharma",
-    position: "CEO & Visionary",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80",
-    bio: "Aarav leads Zhoosoft with a passion for innovation and a strategic vision for the future of technology. With over 15 years in the industry, he inspires the team to push boundaries and deliver excellence.",
-    social: { linkedin: "#", twitter: "#" }
-  },
-  {
-    name: "Priya Singh",
-    position: "Chief Technology Officer",
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=300&q=80",
-    bio: "Priya is the technical mastermind behind Zhoosoft's solutions. She ensures our products are built on robust, scalable, and cutting-edge technologies, always prioritizing quality and performance.",
-    social: { linkedin: "#", github: "#" }
-  },
-  {
-    name: "Rohan Mehta",
-    position: "VP of Product Innovation",
-    image: "https://images.unsplash.com/photo-1557862921-37829c7ef0f1?auto=format&fit=crop&w=300&q=80",
-    bio: "Rohan drives product strategy and development, translating market needs into impactful digital solutions. His focus on user experience ensures our products are intuitive and valuable.",
-    social: { linkedin: "#", medium: "#" }
-  },
-  {
-    name: "Sneha Patel",
-    position: "Head of Client Solutions",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
-    bio: "Sneha champions our clients' success, ensuring their needs are met and expectations exceeded. She fosters strong relationships and guides clients through their digital transformation journey.",
-    social: { linkedin: "#", email: "#" }
-  }
-];
-
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeInOut" } }
@@ -48,11 +17,11 @@ const staggerContainer = {
 const AboutLeadership = () => {
   return (
     <div className="pt-20 md:pt-24 pb-16 bg-gray-50">
-      <header className="py-12 md:py-16 bg-gradient-to-r from-indigo-600 to-purple-700 text-white text-center">
+      <header className="py-12 md:py-16 bg-gradient-to-r from-teal-600 to-cyan-700 text-white text-center">
         <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-          <Users2 className="h-16 w-16 mx-auto mb-4 text-purple-300" />
+          <Users2 className="h-16 w-16 mx-auto mb-4 text-teal-300" />
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Meet Our Leadership</h1>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+          <p className="text-xl text-teal-100 max-w-3xl mx-auto">
             The driving force behind Zhoosoft's innovation and success. Our leaders combine experience, vision, and a commitment to excellence.
           </p>
         </motion.div>
@@ -65,36 +34,84 @@ const AboutLeadership = () => {
           initial="hidden"
           animate="visible"
         >
-          {teamMembers.map((member, index) => (
-            <motion.div 
-              key={index} 
-              className="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row card-hover-subtle"
-              variants={fadeIn}
-            >
-              <div className="md:w-1/3">
-                <img  alt={member.name} src={member.image} className="w-full h-48 md:h-full object-cover" />
+          <motion.div 
+            className="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row card-hover-subtle"
+            variants={fadeIn}
+          >
+            <div className="md:w-1/3">
+              <img  alt="Aarav Sharma" className="w-full h-48 md:h-full object-cover" src="https://images.unsplash.com/photo-1613186267015-46dc938f2b8f" />
+            </div>
+            <div className="md:w-2/3 p-6 md:p-8 flex flex-col">
+              <h3 className="text-2xl font-bold text-teal-700 mb-1">Aarav Sharma</h3>
+              <p className="text-md font-semibold text-cyan-600 mb-3">CEO & Visionary</p>
+              <p className="text-gray-600 text-sm mb-4 flex-grow">Aarav leads Zhoosoft with a passion for innovation and a strategic vision for the future of technology. With over 15 years in the industry, he inspires the team to push boundaries and deliver excellence.</p>
+              <div className="flex space-x-3 mt-auto">
+                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-teal-600"><Zap size={20}/></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-teal-600"><Lightbulb size={20}/></a>
               </div>
-              <div className="md:w-2/3 p-6 md:p-8 flex flex-col">
-                <h3 className="text-2xl font-bold text-indigo-700 mb-1">{member.name}</h3>
-                <p className="text-md font-semibold text-purple-600 mb-3">{member.position}</p>
-                <p className="text-gray-600 text-sm mb-4 flex-grow">{member.bio}</p>
-                <div className="flex space-x-3 mt-auto">
-                  {member.social.linkedin && <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-600"><Zap size={20}/></a>}
-                  {member.social.twitter && <a href={member.social.twitter} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-600"><Lightbulb size={20}/></a>}
-                  {member.social.github && <a href={member.social.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-600"><MessageSquare size={20}/></a>}
-                   {member.social.medium && <a href={member.social.medium} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-600"><MessageSquare size={20}/></a>}
-                  {member.social.email && <a href={`mailto:${member.social.email}`} className="text-gray-500 hover:text-indigo-600"><MessageSquare size={20}/></a>}
-                </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row card-hover-subtle"
+            variants={fadeIn}
+          >
+            <div className="md:w-1/3">
+              <img  alt="Priya Singh" className="w-full h-48 md:h-full object-cover" src="https://images.unsplash.com/photo-1573164713988-8665fc963095" />
+            </div>
+            <div className="md:w-2/3 p-6 md:p-8 flex flex-col">
+              <h3 className="text-2xl font-bold text-teal-700 mb-1">Priya Singh</h3>
+              <p className="text-md font-semibold text-cyan-600 mb-3">Chief Technology Officer</p>
+              <p className="text-gray-600 text-sm mb-4 flex-grow">Priya is the technical mastermind behind Zhoosoft's solutions. She ensures our products are built on robust, scalable, and cutting-edge technologies, always prioritizing quality and performance.</p>
+              <div className="flex space-x-3 mt-auto">
+                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-teal-600"><Zap size={20}/></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-teal-600"><MessageSquare size={20}/></a>
               </div>
-            </motion.div>
-          ))}
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row card-hover-subtle"
+            variants={fadeIn}
+          >
+            <div className="md:w-1/3">
+              <img  alt="Rohan Mehta" className="w-full h-48 md:h-full object-cover" src="https://images.unsplash.com/photo-1530303263041-b5ca33678f04" />
+            </div>
+            <div className="md:w-2/3 p-6 md:p-8 flex flex-col">
+              <h3 className="text-2xl font-bold text-teal-700 mb-1">Rohan Mehta</h3>
+              <p className="text-md font-semibold text-cyan-600 mb-3">VP of Product Innovation</p>
+              <p className="text-gray-600 text-sm mb-4 flex-grow">Rohan drives product strategy and development, translating market needs into impactful digital solutions. His focus on user experience ensures our products are intuitive and valuable.</p>
+              <div className="flex space-x-3 mt-auto">
+                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-teal-600"><Zap size={20}/></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-teal-600"><MessageSquare size={20}/></a>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row card-hover-subtle"
+            variants={fadeIn}
+          >
+            <div className="md:w-1/3">
+              <img  alt="Sneha Patel" className="w-full h-48 md:h-full object-cover" src="https://images.unsplash.com/photo-1698047681820-f26b00b6c639" />
+            </div>
+            <div className="md:w-2/3 p-6 md:p-8 flex flex-col">
+              <h3 className="text-2xl font-bold text-teal-700 mb-1">Sneha Patel</h3>
+              <p className="text-md font-semibold text-cyan-600 mb-3">Head of Client Solutions</p>
+              <p className="text-gray-600 text-sm mb-4 flex-grow">Sneha champions our clients' success, ensuring their needs are met and expectations exceeded. She fosters strong relationships and guides clients through their digital transformation journey.</p>
+              <div className="flex space-x-3 mt-auto">
+                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-teal-600"><Zap size={20}/></a>
+                <a href="mailto:#" className="text-gray-500 hover:text-teal-600"><MessageSquare size={20}/></a>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
         
         <motion.div 
           className="text-center mt-16"
           initial={{opacity:0, y:20}}
           animate={{opacity:1, y:0}}
-          transition={{duration:0.5, delay: teamMembers.length * 0.1 + 0.2}}
+          transition={{duration:0.5, delay: 0.8}}
         >
           <p className="text-lg text-gray-700 mb-6">
             Our leadership team is dedicated to fostering a culture of collaboration and growth.

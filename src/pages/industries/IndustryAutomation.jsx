@@ -79,7 +79,7 @@ const IndustryAutomation = () => {
         title="Industry & Automation Solutions"
         subtitle="Optimizing processes, reducing manual effort, and driving productivity with intelligent automation and advanced control systems."
         CtaIcon={Settings}
-        gradientColors="from-gray-700 to-slate-800"
+        gradientColors="from-teal-600 to-cyan-700"
         breadcrumbs={breadcrumbs}
       />
       <ZigZagSection {...industryOverview} />
@@ -88,7 +88,7 @@ const IndustryAutomation = () => {
         title="Our Automation Solutions"
         subtitle="A comprehensive suite of automation services to streamline your operations from factory floor to back office."
         services={solutions}
-        accentColor="blue"
+        accentColor="teal"
       />
       <section className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">

@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -12,13 +13,12 @@ export const navLinks = [
     name: "Service",
     path: "/services",
     subsections: [
-      { name: "Digital Transformation", path: "/services/digital-transformation", description: "Drive innovation and efficiency." },
-      { name: "Custom Software Solutions", path: "/services/custom-software-solutions", description: "Tailored software for your needs." },
-      { name: "IT Consulting", path: "/services/it-consulting", description: "Expert IT guidance & strategy." },
-      { name: "Web Application Development", path: "/services/web-application-development", description: "Modern web apps that perform." },
-      { name: "Mobile Application Development", path: "/services/mobile-application-development", description: "Engaging iOS & Android apps." },
-      { name: "Cloud Solutions (Azure, AWS)", path: "/services/cloud-solutions", description: "Scalable cloud infrastructure." },
-      { name: "AI – Services and Agents", path: "/services/ai-services", description: "Intelligent AI-powered solutions." },
+      { name: "Custom App Development", path: "/services/custom-app-development", description: "Tailored software for your business goals." },
+      { name: "Cross-Platform Mobile Solutions", path: "/services/cross-platform-mobile-solutions", description: "High-performance apps for all devices." },
+      { name: "Cloud Architecture & Deployment", path: "/services/cloud-architecture-deployment", description: "Secure, scalable cloud applications." },
+      { name: "Technology Consulting", path: "/services/technology-consulting", description: "Strategic guidance to modernize systems." },
+      { name: "Legacy System Support", path: "/services/legacy-system-support", description: "Extend the life of older platforms." },
+      { name: "Application Modernization & Migration", path: "/services/application-modernization-migration", description: "Rebuild or migrate outdated apps." },
     ],
   },
   {

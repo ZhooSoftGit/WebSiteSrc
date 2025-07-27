@@ -21,7 +21,7 @@ const ContactPage = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     const subject = `Contact Form: ${formData.subject} - ${formData.name}`;
@@ -30,23 +30,9 @@ const ContactPage = () => {
     body += `Subject: ${formData.subject}\n`;
     body += `\nMessage:\n${formData.message}\n`;
 
-    // const mailtoLink = `mailto:contact@zhoosoft.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:contact@zhoosoft.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    // window.location.href = mailtoLink;
-
-    const res = await fetch("/sendemail.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        mailto: "contact@zhoosoft.com"
-      }),
-    });
+    window.location.href = mailtoLink;
 
     toast({
       title: "Message Ready",
@@ -117,8 +103,8 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-700">Our Office</h3>
-                <p className="text-gray-600">123 Tech Avenue, Innovation City, ST 54321</p>
-                <a href="#" className="text-sm text-teal-600 hover:underline">Get Directions</a>
+                <p className="text-gray-600">194 Sicily Hills Ct, Henderson, Nevada 89012, USA</p>
+                <a href="https://maps.google.com/?q=194+Sicily+Hills+Ct,+Henderson,+Nevada+89012,+USA" target="_blank" rel="noopener noreferrer" className="text-sm text-teal-600 hover:underline">Get Directions</a>
               </div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex items-start space-x-4">
@@ -128,7 +114,6 @@ const ContactPage = () => {
               <div>
                 <h3 className="text-lg font-semibold text-gray-700">Email Us</h3>
                 <p className="text-gray-600">contact@zhoosoft.com</p>
-                <p className="text-gray-600">careers@zhoosoft.com</p>
               </div>
             </div>
              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 flex items-start space-x-4">
@@ -137,8 +122,8 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-700">Call Us</h3>
-                <p className="text-gray-600">Sales: +1 (555) 123-4567</p>
-                <p className="text-gray-600">Support: +1 (555) 987-6543</p>
+                <p className="text-gray-600">Sales : +1 (775) 389-9670</p>
+                <p className="text-gray-600">Support: +1 (775) 389-9670</p>
               </div>
             </div>
           </motion.div>

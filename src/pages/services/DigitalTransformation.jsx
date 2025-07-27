@@ -98,7 +98,7 @@ const DigitalTransformation = () => {
         title="Digital Transformation Services"
         subtitle="Empowering your business to thrive in the digital age through innovative strategies, cutting-edge technologies, and seamless execution."
         CtaIcon={Zap}
-        gradientColors="from-purple-600 to-pink-600"
+        gradientColors="from-teal-600 to-cyan-700"
       />
 
       <ZigZagSection {...whatIsDT} />
@@ -110,7 +110,7 @@ const DigitalTransformation = () => {
         title="Our Digital Transformation Services"
         subtitle="We offer a comprehensive suite of services to guide you through every step of your digital transformation journey."
         services={dtServices}
-        accentColor="purple"
+        accentColor="teal"
       />
       
       <section className="py-12 md:py-20 bg-gray-50">
@@ -149,7 +149,7 @@ const DigitalTransformation = () => {
         title="Our Digital Transformation Approach"
         subtitle="A structured yet flexible methodology to ensure your digital transformation is successful and sustainable."
         steps={ourApproachSteps}
-        accentColor="purple"
+        accentColor="teal"
       />
       
       <TechStackSection 

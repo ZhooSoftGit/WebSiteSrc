@@ -25,7 +25,7 @@ const ZigZagSection = ({ title, description, Icon, imageSrc, imageAlt, reverse =
             transition={{ duration: 0.7 }}
           >
             <div className="relative">
-              <div className={`absolute -inset-1.5 bg-gradient-to-r ${reverse ? "from-pink-400 to-purple-400" : "from-blue-400 to-indigo-400"} rounded-xl blur-lg opacity-50 animate-pulse-slow`}></div>
+              <div className={`absolute -inset-1.5 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-xl blur-lg opacity-50 animate-pulse-slow`}></div>
               <img  src={imageSrc} alt={imageAlt} className="relative w-full h-auto max-h-[400px] object-cover rounded-xl shadow-2xl" />
             </div>
           </motion.div>
@@ -37,7 +37,7 @@ const ZigZagSection = ({ title, description, Icon, imageSrc, imageAlt, reverse =
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             {Icon && (
-              <div className="p-3 bg-gray-100 text-blue-600 rounded-full inline-block mb-4">
+              <div className="p-3 bg-teal-100 text-teal-600 rounded-full inline-block mb-4">
                 <Icon className="h-8 w-8" />
               </div>
             )}

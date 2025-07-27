@@ -1,4 +1,3 @@
-
 import React from "react";
 import ServiceHero from "@/components/services/ServiceHero";
 import ZigZagSection from "@/components/services/ZigZagSection";
@@ -74,7 +73,7 @@ const CustomSoftwareSolutions = () => {
         title="Custom Software Solutions"
         subtitle="Tailor-made software applications designed to perfectly fit your unique business processes, drive efficiency, and accelerate growth."
         CtaIcon={Code}
-        gradientColors="from-green-600 to-emerald-700"
+        gradientColors="from-teal-600 to-cyan-700"
       />
 
       <ZigZagSection {...whatAreCustomSolutions} />
@@ -84,14 +83,14 @@ const CustomSoftwareSolutions = () => {
         title="Our Custom Software Services"
         subtitle="From enterprise applications to specialized tools, we build custom software that solves your specific challenges."
         services={customSoftwareServices}
-        accentColor="green"
+        accentColor="teal"
       />
       
       <ProcessStepsSection 
         title="Our Custom Software Development Process"
         subtitle="A collaborative and agile approach to deliver high-quality custom software that meets your exact specifications."
         steps={developmentProcess}
-        accentColor="green"
+        accentColor="teal"
       />
       
       <TechStackSection 

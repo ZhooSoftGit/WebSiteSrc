@@ -79,7 +79,7 @@ const GamingEntertainment = () => {
         title="Gaming & Entertainment Solutions"
         subtitle="Crafting immersive games, scalable streaming platforms, and AI-driven personalized experiences for the modern entertainment landscape."
         CtaIcon={Gamepad2}
-        gradientColors="from-purple-600 to-pink-700"
+        gradientColors="from-teal-600 to-cyan-700"
         breadcrumbs={breadcrumbs}
       />
       <ZigZagSection {...industryOverview} />
@@ -88,7 +88,7 @@ const GamingEntertainment = () => {
         title="Our Solutions for Gaming & Entertainment"
         subtitle="Comprehensive development services to bring your creative visions to life and engage audiences worldwide."
         services={solutions}
-        accentColor="pink"
+        accentColor="teal"
       />
       <section className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">

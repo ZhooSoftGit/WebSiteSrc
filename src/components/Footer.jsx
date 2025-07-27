@@ -33,21 +33,21 @@ const Footer = () => {
 
   const branches = [
     {
-      name: "Headquarters (Coimbatore)",
-      address: "123 Tech Park, Saravanampatti, Coimbatore, TN 641035, India",
-      phone: "+91 98765 43210",
-      email: "info.cbe@zhoosoft.com"
+      name: "Headquarters",
+      address: "No 3/187, Sri Senthurgarden, Kondayapalayam, Coimbatore North, Coimbatore - 641 110, Tamilnadu",
+      phone: "+91-8344273152",
+      email: "contact@zhoosoft.com"
     },
     {
-      name: "USA Branch",
-      address: "456 Innovation Drive, Suite 200, Austin, TX 78701, USA",
-      phone: "+1 (555) 123-4567",
-      email: "info.usa@zhoosoft.com"
+      name: "Branch Location",
+      address: "194 Sicily Hills Ct, Henderson, Nevada 89012, USA",
+      phone: "+1 (775) 389-9670",
+      email: "contact@zhoosoft.com"
     }
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+    <footer className="bg-gradient-to-r from-slate-900 to-slate-800 text-white">
       <motion.div 
         className="container mx-auto px-4 py-12 md:py-16"
         initial="hidden"
@@ -57,7 +57,7 @@ const Footer = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <motion.div variants={itemVariants} className="space-y-4">
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-teal-200 bg-clip-text text-transparent">
               Zhoosoft
             </span>
             <p className="text-gray-300 mt-4 max-w-xs">
@@ -73,7 +73,7 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/zhoosoft-private-limited-3b0277372/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
             </div>
@@ -98,15 +98,15 @@ const Footer = () => {
               <p className="text-lg font-semibold text-white">{branch.name}</p>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
-                  <MapPin size={20} className="text-blue-400 mt-1 flex-shrink-0" />
+                  <MapPin size={20} className="text-teal-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{branch.address}</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <Phone size={20} className="text-blue-400 flex-shrink-0" />
+                  <Phone size={20} className="text-teal-400 flex-shrink-0" />
                   <span className="text-gray-300">{branch.phone}</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <Mail size={20} className="text-blue-400 flex-shrink-0" />
+                  <Mail size={20} className="text-teal-400 flex-shrink-0" />
                   <span className="text-gray-300">{branch.email}</span>
                 </li>
               </ul>

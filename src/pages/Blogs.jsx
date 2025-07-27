@@ -42,7 +42,7 @@ const Blogs = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold mb-8 text-center text-blue-700">Our Blog</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center text-teal-700">Our Blog</h1>
         <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           Stay updated with the latest insights, trends, and news from Zhoosoft and the technology industry.
         </p>
@@ -51,19 +51,19 @@ const Blogs = () => {
           {dummyBlogs.map((blog, index) => (
             <motion.div
               key={blog.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden card-hover"
+              className="bg-white rounded-lg shadow-lg overflow-hidden card-hover border-l-4 border-teal-500"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
             >
               <img src={blog.imageUrl} alt={blog.title} className="w-full h-48 object-cover" />
               <div className="p-6">
-                <span className="text-xs font-semibold text-blue-600 uppercase">{blog.category}</span>
+                <span className="text-xs font-semibold text-teal-600 uppercase">{blog.category}</span>
                 <h2 className="text-xl font-bold text-gray-800 mt-2 mb-3 h-16 overflow-hidden">{blog.title}</h2>
                 <p className="text-sm text-gray-600 mb-1">By {blog.author} on {blog.date}</p>
                 <p className="text-gray-700 text-sm mb-4 h-20 overflow-hidden">{blog.excerpt}</p>
                 <Link to={`/blogs/${blog.id}`}>
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full text-teal-600 border-teal-600 hover:bg-teal-50">
                     Read More <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>

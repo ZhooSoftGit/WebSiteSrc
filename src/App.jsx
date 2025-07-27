@@ -7,13 +7,12 @@ import Home from "@/pages/Home";
 import ScrollToTop from "@/components/ScrollToTop";
 
 import Services from "@/pages/Services";
-import DigitalTransformation from "@/pages/services/DigitalTransformation";
 import CustomSoftwareSolutions from "@/pages/services/CustomSoftwareSolutions";
 import ITConsulting from "@/pages/services/ITConsulting";
-import WebApplicationDevelopment from "@/pages/services/WebApplicationDevelopment";
 import MobileApplicationDevelopment from "@/pages/services/MobileApplicationDevelopment";
 import CloudSolutions from "@/pages/services/CloudSolutions";
-import AIServices from "@/pages/services/AIServices";
+import LegacySystemSupport from "@/pages/services/LegacySystemSupport";
+import ApplicationModernization from "@/pages/services/ApplicationModernization";
 import ServiceCaseStudyPage from "@/pages/services/CaseStudyPage"; 
 
 import Products from "@/pages/Products";
@@ -59,20 +58,17 @@ function App() {
             <Route path="/" element={<Home />} />
 
             <Route path="/services" element={<Services />} />
-            <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
-            <Route path="/services/digital-transformation/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="Digital Transformation"/>} />
-            <Route path="/services/custom-software-solutions" element={<CustomSoftwareSolutions />} />
+            <Route path="/services/custom-app-development" element={<CustomSoftwareSolutions />} />
+            <Route path="/services/cross-platform-mobile-solutions" element={<MobileApplicationDevelopment />} />
+            <Route path="/services/cloud-architecture-deployment" element={<CloudSolutions />} />
+            <Route path="/services/technology-consulting" element={<ITConsulting />} />
+            <Route path="/services/legacy-system-support" element={<LegacySystemSupport />} />
+            <Route path="/services/application-modernization-migration" element={<ApplicationModernization />} />
+
             <Route path="/services/custom-software-solutions/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="Custom Software Solutions"/>} />
-            <Route path="/services/it-consulting" element={<ITConsulting />} />
             <Route path="/services/it-consulting/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="IT Consulting"/>} />
-            <Route path="/services/web-application-development" element={<WebApplicationDevelopment />} />
-            <Route path="/services/web-application-development/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="Web Application Development"/>} />
-            <Route path="/services/mobile-application-development" element={<MobileApplicationDevelopment />} />
-             <Route path="/services/mobile-application-development/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="Mobile Application Development"/>} />
-            <Route path="/services/cloud-solutions" element={<CloudSolutions />} />
+            <Route path="/services/mobile-application-development/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="Mobile Application Development"/>} />
             <Route path="/services/cloud-solutions/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="Cloud Solutions"/>} />
-            <Route path="/services/ai-services" element={<AIServices />} />
-            <Route path="/services/ai-services/case-study/:caseStudyId" element={<ServiceCaseStudyPage parentService="AI Services"/>} />
             
             <Route path="/products" element={<Products />} />
             <Route path="/products/ride-booking-app" element={<RideBookingApp />} />

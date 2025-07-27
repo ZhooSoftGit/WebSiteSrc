@@ -6,27 +6,27 @@ import { Button } from "@/components/ui/button";
 
 const reasons = [
   { 
-    icon: <Award className="h-10 w-10 text-blue-500" />, 
+    icon: <Award className="h-10 w-10 text-teal-500" />, 
     title: "Proven Expertise", 
     description: "Years of experience and a portfolio of successful projects across diverse industries demonstrate our capability to deliver results." 
   },
   { 
-    icon: <Users className="h-10 w-10 text-green-500" />, 
+    icon: <Users className="h-10 w-10 text-teal-500" />, 
     title: "Client-Centric Approach", 
     description: "We prioritize your needs, working closely with you to understand your goals and tailor solutions that provide real business value." 
   },
   { 
-    icon: <Lightbulb className="h-10 w-10 text-yellow-500" />, 
+    icon: <Lightbulb className="h-10 w-10 text-teal-500" />, 
     title: "Innovative Solutions", 
     description: "We stay at the forefront of technology, leveraging the latest tools and methodologies to build future-proof solutions." 
   },
   { 
-    icon: <TrendingUp className="h-10 w-10 text-purple-500" />, 
+    icon: <TrendingUp className="h-10 w-10 text-teal-500" />, 
     title: "Scalability & Performance", 
     description: "Our solutions are designed for growth, ensuring they can scale with your business and perform reliably under demand." 
   },
   { 
-    icon: <Zap className="h-10 w-10 text-red-500" />, 
+    icon: <Zap className="h-10 w-10 text-teal-500" />, 
     title: "Agile & Transparent", 
     description: "We follow agile practices for flexibility and maintain transparent communication throughout the project lifecycle." 
   },
@@ -50,11 +50,11 @@ const staggerContainer = {
 const AboutWhyChooseUs = () => {
   return (
     <div className="pt-20 md:pt-24 pb-16 bg-gray-50">
-      <header className="py-12 md:py-16 bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-center">
+      <header className="py-12 md:py-16 bg-gradient-to-r from-teal-600 to-cyan-700 text-white text-center">
         <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-          <CheckSquare className="h-16 w-16 mx-auto mb-4 text-cyan-300" />
+          <CheckSquare className="h-16 w-16 mx-auto mb-4 text-teal-300" />
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Why Partner with Zhoosoft?</h1>
-          <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
+          <p className="text-xl text-teal-100 max-w-3xl mx-auto">
             Discover the distinct advantages that make Zhoosoft the ideal technology partner for your business growth and innovation.
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ const AboutWhyChooseUs = () => {
               className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center card-hover-subtle border border-gray-200"
               variants={fadeIn}
             >
-              <div className="p-4 bg-gray-100 rounded-full mb-4">
+              <div className="p-4 bg-teal-50 rounded-full mb-4">
                 {reason.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">{reason.title}</h3>
@@ -83,18 +83,18 @@ const AboutWhyChooseUs = () => {
         </motion.div>
         
         <motion.div 
-          className="mt-16 p-8 md:p-12 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl shadow-2xl text-center"
+          className="mt-16 p-8 md:p-12 bg-gradient-to-r from-teal-600 to-cyan-700 text-white rounded-xl shadow-2xl text-center"
           initial={{opacity:0, scale:0.95}}
           whileInView={{opacity:1, scale:1}}
           viewport={{once: true, amount:0.5}}
           transition={{duration:0.7, ease:"easeOut"}}
         >
-          <Search className="h-12 w-12 mx-auto mb-4 text-blue-300" />
+          <Search className="h-12 w-12 mx-auto mb-4 text-teal-300" />
           <h2 className="text-3xl font-bold mb-4">Ready to Elevate Your Business?</h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-xl mx-auto">
+          <p className="text-lg text-teal-100 mb-8 max-w-xl mx-auto">
             Let's discuss how Zhoosoft's expertise can translate into tangible results for your organization.
           </p>
-          <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
+          <Button asChild size="lg" className="bg-white text-teal-700 hover:bg-teal-50">
             <Link to="/contact">Request a Consultation</Link>
           </Button>
         </motion.div>

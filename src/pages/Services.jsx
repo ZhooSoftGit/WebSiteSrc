@@ -106,8 +106,7 @@ const Services = () => {
 
   return (
     <div className="pt-24 pb-16">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <section className="py-16 bg-gradient-to-r from-teal-600 to-cyan-700 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
             className="max-w-3xl mx-auto text-center"
@@ -116,14 +115,13 @@ const Services = () => {
             variants={fadeIn}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-teal-100 mb-8">
               We provide comprehensive technology solutions to help your business thrive in the digital era. Our expert team delivers innovative services tailored to your specific needs.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Services List */}
       <section className="py-20">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
@@ -141,7 +139,7 @@ const Services = () => {
               >
                 <div className="md:w-1/2">
                   <div className="relative">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-lg blur-lg opacity-75"></div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-lg blur-lg opacity-75"></div>
                     <div className="relative bg-white rounded-lg shadow-xl overflow-hidden">
                       <img  alt={`${service.title} service illustration`} className="w-full h-auto rounded-lg" src="https://images.unsplash.com/photo-1493882552576-fce827c6161e" />
                     </div>
@@ -161,7 +159,7 @@ const Services = () => {
                     ))}
                   </div>
                   
-                  <Button>
+                  <Button className="bg-teal-600 hover:bg-teal-700">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -171,7 +169,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
@@ -185,7 +182,7 @@ const Services = () => {
             <p className="text-xl text-gray-600 mb-8">
               Contact us today to discuss how our services can help your business grow and succeed.
             </p>
-            <Button size="lg">
+            <Button size="lg" className="bg-teal-600 hover:bg-teal-700">
               Contact Us Today
             </Button>
           </motion.div>

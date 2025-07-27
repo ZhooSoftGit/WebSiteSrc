@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 const HomeCtaSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+    <section className="py-20 bg-gradient-to-r from-teal-600 to-teal-700 text-white">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div 
           className="text-center max-w-3xl mx-auto"
@@ -16,10 +16,10 @@ const HomeCtaSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-teal-100 mb-8">
             Let's discuss how our technology solutions can help you achieve your business goals.
           </p>
-          <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
+          <Button asChild size="lg" className="bg-white text-primary hover:bg-teal-50">
             <Link to="/contact">Contact Us Today <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </Button>
         </motion.div>

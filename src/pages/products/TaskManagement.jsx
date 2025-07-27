@@ -5,7 +5,7 @@ import { ListChecks, PlusSquare, History, BarChartHorizontalBig, Users2, Bell } 
 const TaskManagement = () => {
   const features = [
     {
-      icon: <ListChecks className="h-8 w-8 text-blue-500" />,
+      icon: <ListChecks className="h-8 w-8 text-teal-500" />,
       title: "Task Lists & Boards",
       description: "Organize tasks in customizable lists, Kanban boards, or calendar views."
     },
@@ -43,7 +43,7 @@ const TaskManagement = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold mb-4 text-center text-blue-700">Task Management System</h1>
+        <h1 className="text-4xl font-bold mb-4 text-center text-teal-700">Task Management System</h1>
         <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           A powerful and flexible platform to help teams organize, track, and manage their work efficiently.
         </p>
@@ -52,7 +52,7 @@ const TaskManagement = () => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg card-hover"
+              className="bg-white p-6 rounded-lg shadow-lg card-hover border-l-4 border-teal-500"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}

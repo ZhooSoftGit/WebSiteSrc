@@ -79,7 +79,7 @@ const EnergyUtilities = () => {
         title="Energy & Utilities Solutions"
         subtitle="Empowering a sustainable and efficient energy future with smart software, IoT integration, and advanced analytics."
         CtaIcon={Fuel}
-        gradientColors="from-green-500 to-teal-600"
+        gradientColors="from-teal-600 to-cyan-700"
         breadcrumbs={breadcrumbs}
       />
       <ZigZagSection {...industryOverview} />
@@ -88,7 +88,7 @@ const EnergyUtilities = () => {
         title="Our Solutions for Energy & Utilities"
         subtitle="Innovative technology offerings to help you manage resources, optimize operations, and embrace sustainability."
         services={solutions}
-        accentColor="green"
+        accentColor="teal"
       />
       <section className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">

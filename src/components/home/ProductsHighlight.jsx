@@ -1,8 +1,9 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Car, ShoppingBag, Zap, CheckCircle } from "lucide-react";
+import { ArrowRight, Car, ShoppingBag, Hotel, ListChecks } from "lucide-react";
 
 const ProductsHighlight = () => {
   const fadeIn = {
@@ -26,14 +27,38 @@ const ProductsHighlight = () => {
   };
 
   const products = [
-    { name: "Ride Booking App", icon: <Car className="h-10 w-10 text-blue-500" />, description: "On-demand transport solution.", path: "/products/ride-booking-app" },
-    { name: "E-commerce Platform", icon: <ShoppingBag className="h-10 w-10 text-green-500" />, description: "Build your online store.", path: "/products/ecommerce-platform" },
-    { name: "Hotel Management", icon: <Zap className="h-10 w-10 text-purple-500" />, description: "Streamline hospitality.", path: "/products/hotel-management" },
-    { name: "Task Management", icon: <CheckCircle className="h-10 w-10 text-red-500" />, description: "Organize team projects.", path: "/products/task-management" },
+    { 
+      name: "ZFleet", 
+      headline: "Unified Transport & Fleet Management",
+      icon: <Car className="h-10 w-10 text-teal-500" />, 
+      description: "A complete platform for ride booking, fleet coordination, driver/vendor onboarding, spare parts tracking, and a buy/sell vehicle marketplace — built to evolve with every aspect of your transport business.", 
+      path: "/products/ride-booking-app" 
+    },
+    { 
+      name: "ZCart", 
+      headline: "Multi-Channel Commerce Platform",
+      icon: <ShoppingBag className="h-10 w-10 text-teal-500" />, 
+      description: "Launch and manage your online store with ease. Designed for retailers, wholesalers, and manufacturers to sell smarter through a unified e-commerce solution.", 
+      path: "/products/ecommerce-platform" 
+    },
+    { 
+      name: "ZHost", 
+      headline: "Hotel & Reservation Management",
+      icon: <Hotel className="h-10 w-10 text-teal-500" />, 
+      description: "Streamline daily hotel operations with modules for reservations, waitlists, table assignments, staff shifts, and invoicing — all in one clean dashboard.", 
+      path: "/products/hotel-management" 
+    },
+    { 
+      name: "ZTask", 
+      headline: "Dynamic Workflow & Task Manager",
+      icon: <ListChecks className="h-10 w-10 text-teal-500" />, 
+      description: "Create your own modules and custom forms to track, manage, and automate team activities with maximum flexibility and visibility.", 
+      path: "/products/task-management" 
+    },
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           className="text-center mb-16"
@@ -42,13 +67,13 @@ const ProductsHighlight = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeIn}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Flagship Products</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Our Flagship Products</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Innovative and ready-to-deploy solutions to accelerate your business growth.
+            Smart, scalable, and ready-to-deploy platforms designed to streamline operations and accelerate business growth.
           </p>
         </motion.div>
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -58,18 +83,20 @@ const ProductsHighlight = () => {
             <motion.div
               key={product.name}
               variants={fadeIn}
-              className="bg-white p-6 rounded-xl shadow-lg card-hover text-center flex flex-col items-center"
+              className="bg-white p-8 rounded-xl shadow-lg card-hover flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6"
             >
-              <div className="p-4 bg-gray-100 rounded-full mb-4 inline-block">
+              <div className="flex-shrink-0 p-4 bg-teal-100 rounded-full inline-flex items-center justify-center">
                 {product.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">{product.name}</h3>
-              <p className="text-gray-600 mb-4 flex-grow">{product.description}</p>
-              <Link to={product.path}>
-                <Button variant="link" className="text-blue-600 hover:text-blue-800">
-                  Explore Product <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
+              <div className="flex-grow text-center md:text-left">
+                <h3 className="text-2xl font-bold mb-2 text-gray-800">{product.name} – {product.headline}</h3>
+                <p className="text-gray-600 mb-4 flex-grow">{product.description}</p>
+                <Link to={product.path}>
+                  <Button variant="link" className="text-teal-600 font-semibold p-0 hover:no-underline">
+                    Explore Product <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
             </motion.div>
           ))}
         </motion.div>

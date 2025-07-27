@@ -71,7 +71,7 @@ const MobileApplicationDevelopment = () => {
         title="Mobile Application Development"
         subtitle="Crafting intuitive, high-performance mobile apps that captivate users and drive business growth across iOS, Android, and cross-platform technologies including .NET MAUI and Xamarin."
         CtaIcon={Smartphone}
-        gradientColors="from-pink-500 to-rose-600"
+        gradientColors="from-teal-600 to-cyan-700"
       />
 
       <ZigZagSection {...whyMobileAppsMatter} />
@@ -81,14 +81,14 @@ const MobileApplicationDevelopment = () => {
         title="Our Mobile App Development Services"
         subtitle="A full spectrum of services to bring your mobile app idea to life, from concept to launch and beyond, including expertise in MAUI and Xamarin for smooth, native cross-platform experiences."
         services={mobileAppServices}
-        accentColor="pink"
+        accentColor="teal"
       />
       
       <ProcessStepsSection 
         title="Our App Development Process"
         subtitle="A streamlined, agile process designed to deliver high-quality mobile applications efficiently and effectively, ensuring smooth transitions and excellent UI/UX."
         steps={appDevelopmentProcess}
-        accentColor="pink"
+        accentColor="teal"
       />
       
       <TechStackSection 

@@ -1,4 +1,3 @@
-
 import React from "react";
 import IndustryHero from "@/components/industries/IndustryHero";
 import ZigZagSection from "@/components/services/ZigZagSection";
@@ -80,7 +79,7 @@ const TravelLogistics = () => {
         title="Travel & Logistics Solutions"
         subtitle="Driving efficiency and innovation in transportation, fleet management, and global logistics with cutting-edge digital solutions."
         CtaIcon={Plane}
-        gradientColors="from-cyan-600 to-blue-700"
+        gradientColors="from-teal-600 to-cyan-700"
         breadcrumbs={breadcrumbs}
       />
       <ZigZagSection {...industryOverview} />
@@ -89,7 +88,7 @@ const TravelLogistics = () => {
         title="Our Solutions for Travel & Logistics"
         subtitle="Tailored technology offerings to address the unique needs of the travel and logistics sector."
         services={solutions}
-        accentColor="blue"
+        accentColor="teal"
       />
       <section className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">

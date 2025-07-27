@@ -5,7 +5,7 @@ import { Users, Utensils, ClipboardList, CalendarClock, BarChart3, CheckSquare }
 const HotelManagement = () => {
   const features = [
     {
-      icon: <Users className="h-8 w-8 text-blue-500" />,
+      icon: <Users className="h-8 w-8 text-teal-500" />,
       title: "Staff Management",
       description: "Efficiently manage staff schedules, roles, permissions, and performance."
     },
@@ -43,7 +43,7 @@ const HotelManagement = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold mb-4 text-center text-blue-700">Hotel & Restaurant Management System</h1>
+        <h1 className="text-4xl font-bold mb-4 text-center text-teal-700">Hotel & Restaurant Management System</h1>
         <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           An all-in-one solution to streamline operations, enhance guest experience, and boost profitability for hotels and restaurants.
         </p>
@@ -52,7 +52,7 @@ const HotelManagement = () => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg card-hover"
+              className="bg-white p-6 rounded-lg shadow-lg card-hover border-l-4 border-teal-500"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}

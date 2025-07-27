@@ -34,7 +34,7 @@ const IndustriesServed = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           className="text-center mb-16"
@@ -62,7 +62,7 @@ const IndustriesServed = () => {
               className="bg-white p-6 rounded-xl shadow-lg card-hover text-center flex flex-col items-center justify-center aspect-square"
             >
               <Link to={industry.path} className="flex flex-col items-center justify-center h-full">
-                <div className="text-blue-600 mb-3">{industry.icon}</div>
+                <div className="text-primary mb-3">{industry.icon}</div>
                 <h3 className="text-md font-semibold text-gray-700">{industry.name}</h3>
               </Link>
             </motion.div>
