@@ -25,10 +25,10 @@ export const navLinks = [
     name: "Products",
     path: "/products",
     subsections: [
-      { name: "Ride Booking App", path: "/products/ride-booking-app", description: "Uber-like app solution." },
-      { name: "E-commerce Platform", path: "/products/ecommerce-platform", description: "Feature-rich online stores." },
-      { name: "Hotel-Management", path: "/products/hotel-management", description: "Streamline hotel operations." },
-      { name: "Task Management", path: "/products/task-management", description: "Organize and track work." },
+      { name: "ZFleet", path: "/products/ride-booking-app", description: "Fleet & Driver Management" },
+      { name: "ZCart", path: "/products/ecommerce-platform", description: "eCommerce Engine" },
+      { name: "ZHost", path: "/products/hotel-management", description: "Hosting & Deployment Suite" },
+      { name: "ZTask", path: "/products/task-management", description: "Task & Workflow Manager" },
     ],
   },
   {

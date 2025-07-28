@@ -37,7 +37,7 @@ const ProductCard = ({ product }) => {
     <motion.div
       whileHover={{ y: -8, scale: 1.02 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="flex-shrink-0 w-64 bg-white rounded-xl shadow-lg p-6 flex flex-col items-start cursor-pointer"
+      className="flex-shrink-0 w-full bg-white rounded-xl shadow-lg p-6 flex flex-col items-start cursor-pointer"
     >
       <div className="w-full h-32 mb-4 rounded-lg overflow-hidden">
         <img  alt={product.name} className="w-full h-full object-cover" src={product.image} />
@@ -94,10 +94,10 @@ const HeroSection = () => {
           >
             <div
               ref={scrollRef}
-              className="flex space-x-6 overflow-x-auto py-8 px-2 hide-scrollbar snap-x snap-mandatory"
+              className="flex space-x-4 md:space-x-6 overflow-x-auto py-8 px-2 hide-scrollbar snap-x snap-mandatory"
             >
               {products.map((product, index) => (
-                <div key={index} className="snap-center">
+                <div key={index} className="snap-center flex-shrink-0 w-5/6 sm:w-64">
                   <ProductCard product={product} />
                 </div>
               ))}
