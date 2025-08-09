@@ -1,4 +1,3 @@
-
 import React from "react";
 import CareerHeader from "@/components/career/CareerHeader";
 import JobOpeningsSection from "@/components/career/JobOpeningsSection";
