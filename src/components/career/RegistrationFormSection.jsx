@@ -48,22 +48,40 @@ const RegistrationFormSection = () => {
       return;
     }
 
-    const subject = `Job Application: ${formData.position || 'General Interest'} - ${formData.fullName}`;
-    let body = `Full Name: ${formData.fullName}\n`;
-    body += `Email: ${formData.email}\n`;
-    if (formData.phone) body += `Phone: ${formData.phone}\n`;
-    if (formData.position) body += `Desired Position: ${formData.position}\n`;
-    body += `\nCover Letter/Message:\n${formData.coverLetter}\n`;
-    body += `\n--- Resume Attached: ${resumeFile.name} ---`;
+      try {
+    // Build the form data for API
+    const formDataToSend = new FormData();
+    formDataToSend.append("Name", formData.fullName);
+    formDataToSend.append("Mail", formData.email);
+    formDataToSend.append("PhoneNo", formData.phone || "");
+    formDataToSend.append("DesiredPosition", formData.position || "");
+    formDataToSend.append("CoverLetter", formData.coverLetter);
+    formDataToSend.append("Resume", resumeFile);
 
-    const mailtoLink = `mailto:careers@zhoosoft.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    window.location.href = mailtoLink;
-
-    toast({ title: "Application Ready", description: "Your email client should open. Please attach your resume and send the email." });
-    
-    setFormData({ fullName: "", email: "", phone: "", position: "", coverLetter: "" });
-    removeResume();
+    // Call your backend API (adjust URL to your actual endpoint)
+     fetch("https://zhoosoftcommon-ebe3d9efa3gfhvd4.canadacentral-01.azurewebsites.net/career/apply", {
+      method: "POST",
+      body: formDataToSend
+    }).then(response => {
+      if (response.ok) {
+        toast({
+          title: "Application Submitted",
+          description: "Your application has been submitted successfully."
+        });
+        // Reset form
+        setFormData({ fullName: "", email: "", phone: "", position: "", coverLetter: "" });
+        removeResume();
+      } else {
+        throw new Error("Failed to submit application");
+      }
+    });
+  } catch (error) {
+    toast({
+      title: "Error",
+      description: error.message || "Something went wrong.",
+      variant: "destructive"
+    });
+  }
   };
 
   const fadeIn = {
@@ -95,8 +113,8 @@ const RegistrationFormSection = () => {
             <Input type="email" name="email" id="email" value={formData.email} onChange={handleInputChange} placeholder="e.g. priya.sharma@example.com" required className="mt-1"/>
           </div>
           <div>
-            <Label htmlFor="phone">Phone Number (Optional)</Label>
-            <Input type="tel" name="phone" id="phone" value={formData.phone} onChange={handleInputChange} placeholder="e.g. +91 98765 43210" className="mt-1"/>
+            <Label htmlFor="phone">Phone Number</Label>
+            <Input type="tel" name="phone" id="phone" value={formData.phone} onChange={handleInputChange} placeholder="e.g. +91 98765 43210" required className="mt-1"/>
           </div>
           <div>
             <Label htmlFor="position">Desired Position (Optional)</Label>

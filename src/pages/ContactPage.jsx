@@ -9,6 +9,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const ContactPage = () => {
   const { toast } = useToast();
+  const apiURL = "https://zhoosoftcommon-ebe3d9efa3gfhvd4.canadacentral-01.azurewebsites.net";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,22 +24,42 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    const subject = `Contact Form: ${formData.subject} - ${formData.name}`;
-    let body = `Name: ${formData.name}\n`;
-    body += `Email: ${formData.email}\n`;
-    body += `Subject: ${formData.subject}\n`;
-    body += `\nMessage:\n${formData.message}\n`;
 
-    const mailtoLink = `mailto:contact@zhoosoft.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    window.location.href = mailtoLink;
+    try {
+      // const subject = `Contact Form: ${formData.subject} - ${formData.name}`;
+    // let body = `Name: ${formData.name}\n`;
+    // body += `Email: ${formData.email}\n`;
+    // body += `Subject: ${formData.subject}\n`;
+    // body += `\nMessage:\n${formData.message}\n`;
 
-    toast({
-      title: "Message Ready",
-      description: "Your email client should open with the message details. Please send the email.",
+    // const mailtoLink = `mailto:contact@zhoosoft.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // window.location.href = mailtoLink;
+
+    fetch( apiURL + "/Contact/send", { // <-- SET API URL HERE
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    }).then((response) => {
+
+       toast({
+      title: "Message sent successfully",
+      description: "Your email sent successfully",
     });
     setFormData({ name: "", email: "", subject: "", message: "" });
+    }).catch((error) => {
+       throw new Error("Failed to send message");
+    });
+
+  
+
+   
+    }
+    catch(Exception) {
+      console.log(Exception);
+    }
   };
   
   const fadeIn = {
@@ -85,7 +106,7 @@ const ContactPage = () => {
                 <Textarea name="message" id="message" value={formData.message} onChange={handleInputChange} placeholder="Your message here..." rows={5} required className="mt-1"/>
               </div>
               <Button type="submit" size="lg" className="w-full bg-teal-600 hover:bg-teal-700">
-                <Send className="mr-2 h-5 w-5" /> Prepare Email Message
+                <Send className="mr-2 h-5 w-5" /> Send Email
               </Button>
             </form>
           </motion.div>
