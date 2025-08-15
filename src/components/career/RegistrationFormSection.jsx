@@ -12,6 +12,7 @@ const RegistrationFormSection = () => {
   const [formData, setFormData] = useState({ fullName: "", email: "", phone: "", position: "", coverLetter: "" });
   const [resumeFile, setResumeFile] = useState(null);
   const [resumePreview, setResumePreview] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -47,41 +48,44 @@ const RegistrationFormSection = () => {
       toast({ title: "Resume Required", description: "Please upload your resume.", variant: "destructive" });
       return;
     }
+    setIsSubmitting(true);
+    try {
+      // Build the form data for API
+      const formDataToSend = new FormData();
+      formDataToSend.append("Name", formData.fullName);
+      formDataToSend.append("Mail", formData.email);
+      formDataToSend.append("PhoneNo", formData.phone || "");
+      formDataToSend.append("DesiredPosition", formData.position || "");
+      formDataToSend.append("CoverLetter", formData.coverLetter);
+      formDataToSend.append("Resume", resumeFile);
 
-      try {
-    // Build the form data for API
-    const formDataToSend = new FormData();
-    formDataToSend.append("Name", formData.fullName);
-    formDataToSend.append("Mail", formData.email);
-    formDataToSend.append("PhoneNo", formData.phone || "");
-    formDataToSend.append("DesiredPosition", formData.position || "");
-    formDataToSend.append("CoverLetter", formData.coverLetter);
-    formDataToSend.append("Resume", resumeFile);
-
-    // Call your backend API (adjust URL to your actual endpoint)
-     fetch("https://zhoosoftcommon-ebe3d9efa3gfhvd4.canadacentral-01.azurewebsites.net/career/apply", {
-      method: "POST",
-      body: formDataToSend
-    }).then(response => {
-      if (response.ok) {
-        toast({
-          title: "Application Submitted",
-          description: "Your application has been submitted successfully."
-        });
-        // Reset form
-        setFormData({ fullName: "", email: "", phone: "", position: "", coverLetter: "" });
-        removeResume();
-      } else {
-        throw new Error("Failed to submit application");
-      }
-    });
-  } catch (error) {
-    toast({
-      title: "Error",
-      description: error.message || "Something went wrong.",
-      variant: "destructive"
-    });
-  }
+      // Call your backend API (adjust URL to your actual endpoint)
+       fetch("https://zhoosoftcommon-ebe3d9efa3gfhvd4.canadacentral-01.azurewebsites.net/career/apply", {
+        method: "POST",
+        body: formDataToSend
+      }).then(response => {
+        if (response.ok) {
+          toast({
+            title: "Application Submitted",
+            description: "Your application has been submitted successfully."
+          });
+          // Reset form
+          setFormData({ fullName: "", email: "", phone: "", position: "", coverLetter: "" });
+          removeResume();
+          setIsSubmitting(false);
+        } else {
+          setIsSubmitting(false);
+          throw new Error("Failed to submit application");
+        }
+      });
+    } catch (error) {
+      setIsSubmitting(false);
+      toast({
+        title: "Error",
+        description: error.message || "Something went wrong.",
+        variant: "destructive"
+      });
+    }
   };
 
   const fadeIn = {
@@ -104,6 +108,26 @@ const RegistrationFormSection = () => {
           Don't see a suitable role? Submit your resume, and we'll contact you if a matching opportunity arises.
         </p>
         <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-xl space-y-6 border border-purple-100">
+          {/* Progress Bar */}
+          {isSubmitting && (
+            <div className="w-full h-1 mb-6 bg-gray-200 rounded overflow-hidden relative">
+              <div
+                className="h-full bg-purple-500 animate-progress"
+                style={{ width: "100%" }}
+              />
+              <style>
+                {`
+                  @keyframes progress {
+                    0% { transform: translateX(-100%); }
+                    100% { transform: translateX(100%); }
+                  }
+                  .animate-progress {
+                    animation: progress 1.5s linear infinite;
+                  }
+                `}
+              </style>
+            </div>
+          )}
           <div>
             <Label htmlFor="fullName">Full Name</Label>
             <Input type="text" name="fullName" id="fullName" value={formData.fullName} onChange={handleInputChange} placeholder="e.g. Priya Sharma" required className="mt-1"/>
@@ -148,7 +172,7 @@ const RegistrationFormSection = () => {
               </div>
             )}
           </div>
-          <Button type="submit" size="lg" className="w-full bg-purple-600 hover:bg-purple-700">Prepare Email Application</Button>
+          <Button type="submit" size="lg" className="w-full bg-purple-600 hover:bg-purple-700">Apply</Button>
         </form>
       </div>
     </motion.section>

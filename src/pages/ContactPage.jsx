@@ -16,6 +16,7 @@ const ContactPage = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -24,40 +25,28 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setIsSubmitting(true);
     try {
-      // const subject = `Contact Form: ${formData.subject} - ${formData.name}`;
-    // let body = `Name: ${formData.name}\n`;
-    // body += `Email: ${formData.email}\n`;
-    // body += `Subject: ${formData.subject}\n`;
-    // body += `\nMessage:\n${formData.message}\n`;
-
-    // const mailtoLink = `mailto:contact@zhoosoft.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    // window.location.href = mailtoLink;
-
-    fetch( apiURL + "/Contact/send", { // <-- SET API URL HERE
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    }).then((response) => {
-
-       toast({
-      title: "Message sent successfully",
-      description: "Your email sent successfully",
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    }).catch((error) => {
-       throw new Error("Failed to send message");
-    });
-
-  
-
-   
+      fetch(apiURL + "/Contact/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }).then((response) => {
+        toast({
+          title: "Message sent successfully",
+          description: "Your email sent successfully",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        setIsSubmitting(false);
+      }).catch((error) => {
+        setIsSubmitting(false);
+        throw new Error("Failed to send message");
+      });
     }
     catch(Exception) {
+      setIsSubmitting(false);
       console.log(Exception);
     }
   };
@@ -87,6 +76,26 @@ const ContactPage = () => {
             animate="visible" 
             variants={{ ...fadeIn, visible: { ...fadeIn.visible, transition: { ...fadeIn.visible.transition, delay: 0.2 }}}}
           >
+            {/* Progress Bar */}
+            {isSubmitting && (
+              <div className="w-full h-1 mb-6 bg-gray-200 rounded overflow-hidden relative">
+                <div
+                  className="h-full bg-teal-500 animate-progress"
+                  style={{ width: "100%" }}
+                />
+                <style>
+                  {`
+                    @keyframes progress {
+                      0% { transform: translateX(-100%); }
+                      100% { transform: translateX(100%); }
+                    }
+                    .animate-progress {
+                      animation: progress 1.5s linear infinite;
+                    }
+                  `}
+                </style>
+              </div>
+            )}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
