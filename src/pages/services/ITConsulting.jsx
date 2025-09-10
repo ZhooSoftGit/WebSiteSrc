@@ -1,3 +1,4 @@
+
 import React from "react";
 import ServiceHero from "@/components/services/ServiceHero";
 import ZigZagSection from "@/components/services/ZigZagSection";
@@ -61,7 +62,7 @@ const ITConsulting = () => {
     { name: "Google Cloud", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original-wordmark.svg", color: "text-blue-400" },
     { name: "Salesforce", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg", color: "text-sky-500" },
     { name: "SAP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sap/sap-original.svg", color: "text-blue-600" },
-    { name: "ServiceNow", logo: "https://img.icons8.com/color/48/servicenow.png", color: "text-green-500" },
+    { name: "ServiceNow", logo: "https://img.icons8.com/?size=48&id=PoxG92S14n73&format=png", color: "text-green-500" },
     { name: "Kubernetes", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain-wordmark.svg", color: "text-blue-700" },
     { name: "Okta", logo: "https://img.icons8.com/?size=48&id=PoxG92S14n73&format=png", color: "text-blue-800"},
   ];

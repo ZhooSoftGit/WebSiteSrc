@@ -1,4 +1,5 @@
-import React from "react";
+
+    import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -13,25 +14,7 @@ const dummyBlogs = [
     excerpt: "Artificial Intelligence is rapidly transforming the landscape of software development. Discover the key trends and how AI is being leveraged to build smarter, more efficient applications...",
     category: "AI & Machine Learning",
     imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YWklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-  },
-  {
-    id: "2",
-    title: "Mastering Cloud Solutions: AWS vs Azure",
-    date: "2025-04-22",
-    author: "John Smith",
-    excerpt: "Choosing the right cloud platform is crucial for business success. This post provides a comprehensive comparison of AWS and Azure, helping you make an informed decision...",
-    category: "Cloud Computing",
-    imageUrl: "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2xvdWQlMjBjb21wdXRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
-  },
-  {
-    id: "3",
-    title: "The Rise of Digital Transformation in SMEs",
-    date: "2025-03-15",
-    author: "Alice Brown",
-    excerpt: "Digital transformation is no longer just for large enterprises. Small and Medium Enterprises (SMEs) are increasingly adopting digital tools to enhance efficiency and competitiveness...",
-    category: "Digital Transformation",
-    imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c7DA?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRpZ2l0YWwlMjB0cmFuc2Zvcm1hdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
-  },
+  }
 ];
 
 const Blogs = () => {
@@ -78,3 +61,4 @@ const Blogs = () => {
 };
 
 export default Blogs;
+  

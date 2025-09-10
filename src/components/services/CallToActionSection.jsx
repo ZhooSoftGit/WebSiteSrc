@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -9,8 +10,8 @@ const CallToActionSection = ({
     subtitle = "Let's discuss how Zhoosoft can help you achieve your business goals with our expert solutions.",
     primaryButtonText = "Contact Us Today",
     primaryButtonLink = "/contact",
-    secondaryButtonText = "Explore Our Work",
-    secondaryButtonLink = "/projects"
+    secondaryButtonText,
+    secondaryButtonLink
 }) => {
   const fadeIn = {
     hidden: { opacity: 0, y: 30 },

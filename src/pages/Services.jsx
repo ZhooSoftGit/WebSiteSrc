@@ -71,7 +71,7 @@ const ServiceCard = ({ service, index }) => {
       className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group card-hover"
     >
       <div className="relative h-56 overflow-hidden">
-        <img 
+        <img
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           alt={service.title}
           src={service.image} />
@@ -111,8 +111,8 @@ const Services = () => {
         <title>Our Services - Zhoosoft</title>
         <meta name="description" content="Explore Zhoosoft's comprehensive technology services, from custom app development and mobile solutions to cloud architecture and legacy system modernization." />
       </Helmet>
-      
-      <ServiceHero 
+
+      <ServiceHero
         title="Our Services"
         subtitle="We provide comprehensive technology solutions to help your business thrive in the digital era. Our expert team delivers innovative services tailored to your specific needs."
         CtaIcon={Code}
@@ -134,7 +134,7 @@ const Services = () => {
         </div>
       </section>
 
-      <CallToActionSection 
+      <CallToActionSection
         title="Ready to Get Started?"
         subtitle="Contact us today to discuss how our services can help your business grow and succeed."
         primaryButtonText="Contact Us Today"

@@ -1,4 +1,5 @@
-import React from "react";
+
+    import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/Navbar";
@@ -20,17 +21,6 @@ import RideBookingApp from "@/pages/products/RideBookingApp";
 import EcommercePlatform from "@/pages/products/EcommercePlatform";
 import HotelManagement from "@/pages/products/HotelManagement";
 import TaskManagement from "@/pages/products/TaskManagement";
-
-import Industries from "@/pages/Industries";
-import TravelLogistics from "@/pages/industries/TravelLogistics";
-import FinancialServices from "@/pages/industries/FinancialServices";
-import LifeSciencesHealthcare from "@/pages/industries/LifeSciencesHealthcare";
-import IndustryAutomation from "@/pages/industries/IndustryAutomation";
-import EnergyUtilities from "@/pages/industries/EnergyUtilities";
-import Automotive from "@/pages/industries/Automotive";
-import GamingEntertainment from "@/pages/industries/GamingEntertainment";
-import IndustryCaseStudyPage from "@/pages/industries/IndustryCaseStudyPage";
-
 
 import Career from "@/pages/Career";
 
@@ -76,23 +66,6 @@ function App() {
             <Route path="/products/hotel-management" element={<HotelManagement />} />
             <Route path="/products/task-management" element={<TaskManagement />} />
 
-            <Route path="/industries" element={<Industries />} />
-            <Route path="/industries/travel-logistics" element={<TravelLogistics />} />
-            <Route path="/industries/travel-logistics/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Travel & Logistics" />} />
-            <Route path="/industries/financial-services" element={<FinancialServices />} />
-            <Route path="/industries/financial-services/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Banking & Finance" />} />
-            <Route path="/industries/life-sciences-healthcare" element={<LifeSciencesHealthcare />} />
-            <Route path="/industries/life-sciences-healthcare/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Healthcare" />} />
-            <Route path="/industries/industry-automation" element={<IndustryAutomation />} />
-            <Route path="/industries/industry-automation/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Automation" />} />
-            <Route path="/industries/energy-utilities" element={<EnergyUtilities />} />
-            <Route path="/industries/energy-utilities/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Energy & Utilities" />} />
-            <Route path="/industries/automotive" element={<Automotive />} />
-            <Route path="/industries/automotive/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Automotive" />} />
-            <Route path="/industries/gaming-entertainment" element={<GamingEntertainment />} />
-            <Route path="/industries/gaming-entertainment/case-study/:caseStudyId" element={<IndustryCaseStudyPage parentIndustry="Gaming & Entertainment" />} />
-
-
             <Route path="/career" element={<Career />} />
             
             <Route path="/about" element={<About />} />
@@ -116,3 +89,4 @@ function App() {
 }
 
 export default App;
+  

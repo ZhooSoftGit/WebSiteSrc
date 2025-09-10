@@ -1,3 +1,4 @@
+
 import React from "react";
 import ServiceHero from "@/components/services/ServiceHero";
 import ZigZagSection from "@/components/services/ZigZagSection";
@@ -139,7 +140,7 @@ const AIServices = () => {
       <CallToActionSection 
         title="Ready to Infuse AI into Your Business?"
         subtitle="Let Zhoosoft be your partner in harnessing the transformative power of Artificial Intelligence."
-        secondaryButtonText="Learn About Our Process"
+        secondaryButtonText="Learn About Our Approach"
         secondaryButtonLink="/about" 
       />
     </div>

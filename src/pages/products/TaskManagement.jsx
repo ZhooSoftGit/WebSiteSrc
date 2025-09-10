@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet";
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Edit, 
-  CheckSquare, 
-  Bell, 
+import {
+  ArrowRight,
+  CheckCircle,
+  Edit,
+  CheckSquare,
+  Bell,
   LayoutDashboard,
   Layers,
   FilePlus,
@@ -91,7 +91,7 @@ const TaskManagement = () => {
         <title>ZTask – Build Your Own Workflows & Manage Tasks Smarter</title>
         <meta name="description" content="ZTask by Zhoosoft allows you to create industry-specific modules, forms, and alerts — all from your mobile device." />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 py-20 md:py-28">
@@ -114,7 +114,7 @@ const TaskManagement = () => {
                   <img  class="absolute inset-0 w-full h-full object-contain" alt="Task management dashboard on a smartphone" src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546" />
                </div>
                <div className="w-1/2 h-full transform rotate-6 -translate-x-4">
-                  <img  class="absolute inset-0 w-full h-full object-contain" alt="Custom form creation screen on a smartphone" src="https://images.unsplash.com/photo-1559028006-44a3a2f20975" />
+                  <img  class="absolute inset-0 w-full h-full object-contain" alt="Custom form creation screen on a smartphone" src="https://horizons-cdn.hostinger.com/1d282cf0-6f20-4ad3-8c2b-df4e2099af33/61dad7cf9444f4222d25f120308c2982.png" />
                </div>
             </motion.div>
           </div>
